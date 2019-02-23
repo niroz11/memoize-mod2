@@ -18,9 +18,9 @@ class App extends Component {
       comboData: combo,
       score: 0,
       clickValue:'',
-      scopeQuestion:0,
-      protoQuestion:0,
-      comboQuestion:0
+      scopeQuestion:-1,
+      protoQuestion:-1,
+      comboQuestion:-1
     }
   }
       
@@ -38,6 +38,13 @@ class App extends Component {
     this.setState({
       scopeQuestion
     })
+  }
+  updateScore = () => {
+    
+      this.setState({
+        score: this.state.score +10
+      })
+    
   }
       
 
@@ -60,7 +67,7 @@ class App extends Component {
         <h3>{this.state.score}</h3>
         
         {clickValue === '' &&  buttons()}
-        {clickValue === 'scope' && <Scopecomp scopeData={scopeData} scopeQuestion={scopeQuestion} increment={this.incrementScopeQuestion} score={this.state.score}/>}
+        {clickValue === 'scope' && <Scopecomp scopeData={scopeData} scopeQuestion={scopeQuestion} increment={this.incrementScopeQuestion} score={this.state.score} updateScore={this.updateScore}/>}
         {clickValue === 'combo' && <Combocomp comboData={comboData}/>}
         {clickValue === 'prototypes' && <Protocomp protoData={protoData}/>}
         

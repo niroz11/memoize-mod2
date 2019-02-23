@@ -57,7 +57,7 @@ const scope = [
     },
     {
     "question": "What controls the scope of variable?",
-    "options":["Function location", "Variable location", "Both", "None of these"],
+    "options":["Function location", "Variable Location", "Both", "None of these"],
     "answer" : "Variable Location",
     "points" : 10,
     "key": 9

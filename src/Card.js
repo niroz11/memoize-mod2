@@ -11,15 +11,24 @@ class Card extends Component {
         
         this.setState({
           clickedAnswer: event.target.innerText
+        },() => {
+            if(this.state.clickedAnswer === this.props.scopeData.answer){
+            this.props.updateScore()} 
+            
+            
+            this.props.increment()
         })
+
+
     }
     
     render(){
     const {clickedAnswer} = this.state
     const answer = this.props.scopeData.answer
-    const rightAnswer = clickedAnswer === answer
-    console.log(rightAnswer)
-    const option =  this.props.scopeData.options.map((option) => {
+    
+    
+   
+    const options =  this.props.scopeData.options.map((option) => {
         return (
                <button onClick={this.handleClick}>{option}</button>
             )
@@ -30,8 +39,8 @@ class Card extends Component {
         return(
             <div>
             <h1>{this.props.scopeData.question}</h1>
-            {option}
-            {clickedAnswer === answer && this.props.increment()}
+            {options}
+            
             </div>
         
         )
