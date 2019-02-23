@@ -17,13 +17,13 @@ class Scopecomp extends Component {
 
 
     render(){
-        const {scopeData,scopeQuestion} = this.props
+        const {scopeData,scopeQuestion,score} = this.props
         
             
         return (<div>
             {scopeQuestion === 0 &&  <Instruction increment={this.props.increment}/>}
-            {scopeQuestion > 0 && <Card scopeData={scopeData[scopeQuestion-1]}/> }
-            {/* <h3>I am scope comp</h3> */}
+            {scopeQuestion > 0 && <Card scopeData={scopeData[scopeQuestion-1]} increment={this.props.increment} score={score}/> }
+            
         </div>)
     }
 }

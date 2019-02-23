@@ -16,29 +16,30 @@ class App extends Component {
       protoData : prototypes,
       scopeData : scope,
       comboData: combo,
+      score: 0,
       clickValue:'',
-      
       scopeQuestion:0,
       protoQuestion:0,
       comboQuestion:0
-      
-      
     }
   }
+      
   handleClick = (event) => {
     console.log(event.target.name, "heyy")
     this.setState({
       clickValue: event.target.name
     })
   }
+  
   incrementScopeQuestion = () => {
     let scopeQuestion = this.state.scopeQuestion
     scopeQuestion++
-    console.log(scopeQuestion,"got it")
+    
     this.setState({
       scopeQuestion
     })
   }
+      
 
   
   render() {
@@ -52,24 +53,25 @@ class App extends Component {
         <button onClick={this.handleClick} name="combo">Combo</button>
         </div>)
     }
-    
- 
-
     return (
       
       <div className="App">
         <h1>Memoize</h1>
+        <h3>{this.state.score}</h3>
         
         {clickValue === '' &&  buttons()}
-        {clickValue === 'scope' && <Scopecomp scopeData={scopeData} scopeQuestion={scopeQuestion} increment={this.incrementScopeQuestion}/>}
+        {clickValue === 'scope' && <Scopecomp scopeData={scopeData} scopeQuestion={scopeQuestion} increment={this.incrementScopeQuestion} score={this.state.score}/>}
         {clickValue === 'combo' && <Combocomp comboData={comboData}/>}
         {clickValue === 'prototypes' && <Protocomp protoData={protoData}/>}
         
         
             
       </div>
-    );
+    )
   }
 }
 
 export default App;
+ 
+
+
