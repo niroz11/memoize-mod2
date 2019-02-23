@@ -2,14 +2,25 @@ import React, { Component } from 'react';
 class Card extends Component {
     constructor(){
         super()
+        this.state = {
+            clickedAnswer: ''
+        }
 
     }
+    handleClick = (event) => {
+        
+        this.setState({
+          clickedAnswer: event.target.innerText
+        })
+      }
     
     render(){
+        const answer = this.props.scopeData.answer
+        console.log(answer, "answer")
         
       const option =  this.props.scopeData.options.map((option) => {
             return (
-               <button>{option}</button>
+               <button onClick={this.handleClick}>{option}</button>
             )
         })
         return(

@@ -18,7 +18,7 @@ class Scopecomp extends Component {
 
     render(){
         const {scopeData,scopeQuestion} = this.props
-        console.log(scopeQuestion,"qqq")
+        
             
         return (<div>
             {scopeQuestion === 0 &&  <Instruction increment={this.props.increment}/>}
