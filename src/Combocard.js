@@ -37,12 +37,7 @@ class Combocard extends Component {
         
         
         return(
-            <div>
-            <h1>{this.props.protoData.question}</h1>
-            {options}
-           
             
-            </div>
         
         )
     }
