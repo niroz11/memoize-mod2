@@ -12,7 +12,7 @@ class Combocard extends Component {
         this.setState({
           clickedAnswer: event.target.innerText
         },() => {
-            if(this.state.clickedAnswer === this.props.protoData.answer){
+            if(this.state.clickedAnswer === this.props.comboData.answer){
             this.props.updateScore()} 
             this.props.increment()
         })
@@ -22,12 +22,12 @@ class Combocard extends Component {
             
     render(){
     const {clickedAnswer} = this.state
-    const answer = this.props.protoData.answer
+    const answer = this.props.comboData.answer
     
     
     
    
-    const options =  this.props.protoData.options.map((option) => {
+    const options =  this.props.comboData.options.map((option) => {
         return (
                <button onClick={this.handleClick}>{option}</button>
             )
@@ -37,12 +37,17 @@ class Combocard extends Component {
         
         
         return(
+            <div>
+            <h1>{this.props.comboData.question}</h1>
+            {options}
+           
             
+            </div>
         
         )
     }
 }
-export default Protocard;
+export default Combocard;
                 
             
             
