@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Card from './Card';
+import Protocard from './Protocard';
 import Instruction from './Instruction';
 import App from './App'
 
@@ -17,7 +17,7 @@ class protocomp extends Component {
             
         return (<div>
             {protoQuestion === -1 &&  <Instruction increment={this.props.increment}/>}
-            {protoQuestion > -1 && protoQuestion < 10 && <Card protoData={protoData[protoQuestion]} increment={this.props.increment} score={score} updateScore={this.props.updateScore}/> }
+            {protoQuestion > -1 && protoQuestion < 10 && <Protocard protoData={protoData[protoQuestion]} increment={this.props.increment} score={score} updateScore={this.props.updateScore}/> }
             {protoQuestion === 10 && <p>{score}</p> && <App/> }
         </div>)
     }
