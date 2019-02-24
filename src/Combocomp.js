@@ -4,6 +4,9 @@ import React, { Component } from 'react';
 class Combocomp extends Component {
     constructor(){
         super()
+        this.state = {
+            clickedAnswer: ''
+        }
     }
 
 
