@@ -5,6 +5,7 @@ import combo from './Combodata';
 import Scopecomp from './Scopecomp';
 import Combocomp from './Combocomp';
 import Protocomp from './Protocomp';
+// import './App.scss';
 
 
 
@@ -67,10 +68,10 @@ class App extends Component {
   
   render() {
     const { clickValue, protoData,scopeData,comboData,scopeQuestion,protoQuestion,comboQuestion  } = this.state;
-    console.log(clickValue)
+    // console.log(clickValue)
     const buttons = () => {
       return(
-      <div>
+      <div className="buttons">
         <button onClick={this.handleClick} name="scope">Scope</button>
         <button onClick={this.handleClick} name="prototypes">Prototypes</button>
         <button onClick={this.handleClick} name="combo">Combo</button>
@@ -78,8 +79,8 @@ class App extends Component {
     }
     return (
       
-      <div className="App">
-        <h1>Memoize</h1>
+      <div className="entire-page">
+        <h1 className="hello">Memoize</h1>
         <h3>{this.state.score}</h3>
         
         {clickValue === '' &&  buttons()}
