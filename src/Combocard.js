@@ -27,7 +27,11 @@ class Combocard extends Component {
     
     
    
-    
+    const options =  this.props.protoData.options.map((option) => {
+        return (
+               <button onClick={this.handleClick}>{option}</button>
+            )
+        })
     
     
         
