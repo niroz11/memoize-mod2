@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Card from './Card';
-import Instruction from './Instruction'
+import Instruction from './Instruction';
+import App from './App'
 
 
 class Scopecomp extends Component {
@@ -23,7 +24,7 @@ class Scopecomp extends Component {
         return (<div>
             {scopeQuestion === -1 &&  <Instruction increment={this.props.increment}/>}
             {scopeQuestion > -1 && scopeQuestion < 10 && <Card scopeData={scopeData[scopeQuestion]} increment={this.props.increment} score={score} updateScore={this.props.updateScore}/> }
-            {scopeQuestion === 10 &&  <p> {score} </p>}
+            {scopeQuestion === 10 && <p>{score}</p> && <App/> }
         </div>)
     }
 }

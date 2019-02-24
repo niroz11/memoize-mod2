@@ -14,17 +14,16 @@ class Card extends Component {
         },() => {
             if(this.state.clickedAnswer === this.props.scopeData.answer){
             this.props.updateScore()} 
-            
-            
             this.props.increment()
         })
-
-
     }
-    
+            
+
+            
     render(){
     const {clickedAnswer} = this.state
     const answer = this.props.scopeData.answer
+    
     
     
    
@@ -34,12 +33,14 @@ class Card extends Component {
             )
         })
     
+    
         
         
         return(
             <div>
             <h1>{this.props.scopeData.question}</h1>
             {options}
+           
             
             </div>
         
@@ -47,3 +48,10 @@ class Card extends Component {
     }
 }
 export default Card;
+                
+            
+            
+
+
+   
+    

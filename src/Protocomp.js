@@ -1,13 +1,27 @@
 import React, { Component } from 'react';
-
+import Card from './Card';
+import Instruction from './Instruction';
+import App from './App'
 
 class protocomp extends Component {
-
+    
+    constructor(){
+        super()
+        this.state = {
+            clickedAnswer: ''
+        }
+    }
     render(){
-        return(<div>
-            <p>I am proto comp</p>
+        const {protoData,protoQuestion,score} = this.props
+        
+            
+        return (<div>
+            {protoQuestion === -1 &&  <Instruction increment={this.props.increment}/>}
+            {protoQuestion > -1 && protoQuestion < 10 && <Card protoData={protoData[protoQuestion]} increment={this.props.increment} score={score} updateScore={this.props.updateScore}/> }
+            {protoQuestion === 10 && <p>{score}</p> && <App/> }
         </div>)
     }
+    
     
 }
 export default protocomp;
