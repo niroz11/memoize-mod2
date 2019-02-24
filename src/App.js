@@ -48,11 +48,11 @@ class App extends Component {
     })
   }
   incrementComboQuestion = () => {
-    let scopeQuestion = this.state.scopeQuestion
-    scopeQuestion++
+    let comboQuestion = this.state.comboQuestion
+    comboQuestion++
     
     this.setState({
-      scopeQuestion
+      comboQuestion
     })
   }
   updateScore = () => {
