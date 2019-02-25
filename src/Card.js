@@ -3,7 +3,8 @@ class Card extends Component {
     constructor(){
         super()
         this.state = {
-            clickedAnswer: ''
+            clickedAnswer: '',
+            wrongAnswer: []
         }
 
     }
@@ -13,10 +14,11 @@ class Card extends Component {
           clickedAnswer: event.target.innerText
         },() => {
             if(this.state.clickedAnswer === this.props.scopeData.answer){
-            this.props.updateScore()} 
+            this.props.updateScore()} else
             this.props.increment()
         })
     }
+    
             
 
             

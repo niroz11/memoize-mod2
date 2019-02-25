@@ -18,7 +18,7 @@ class protocomp extends Component {
         return (<div className="proto">
             {protoQuestion === -1 &&  <Instruction increment={this.props.increment}/>}
             {protoQuestion > -1 && protoQuestion < 10 && <Protocard protoData={protoData[protoQuestion]} increment={this.props.increment} score={score} updateScore={this.props.updateScore}/> }
-            {protoQuestion === 10 && <p>{score}</p> && <App/> }
+            {protoQuestion === 10 && <p>{score}</p> && this.props.mainMenu() }
         </div>)
     }
     

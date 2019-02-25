@@ -21,7 +21,8 @@ class App extends Component {
       clickValue:'',
       scopeQuestion:-1,
       protoQuestion:-1,
-      comboQuestion:-1
+      comboQuestion:-1,
+      scopeWrongAnswer:[]
     }
   }
       
@@ -38,6 +39,17 @@ class App extends Component {
     
     this.setState({
       scopeQuestion
+    })
+  }
+  getMainMenu = () => {
+    
+    
+    this.setState({
+      clickValue:'',
+      scopeQuestion: -1,
+      protoQuestion:-1,
+      comboQuestion:-1
+
     })
   }
   incrementProtoQuestion = () => {
@@ -86,9 +98,17 @@ class App extends Component {
         
         {clickValue === '' &&  buttons()}
         <div className="question-section">
-        {clickValue === 'scope' && <Scopecomp scopeData={scopeData} scopeQuestion={scopeQuestion} increment={this.incrementScopeQuestion} score={this.state.score} updateScore={this.updateScore}/>}
-        {clickValue === 'combo' && <Combocomp comboData={comboData} comboQuestion={comboQuestion} increment={this.incrementComboQuestion} score={this.state.score} updateScore={this.updateScore}/>}
-        {clickValue === 'prototypes' && <Protocomp protoData={protoData} protoQuestion={protoQuestion} increment={this.incrementProtoQuestion} score={this.state.score} updateScore={this.updateScore}/>}
+        {clickValue === 'scope' && <Scopecomp scopeData={scopeData} 
+                                      scopeQuestion={scopeQuestion} 
+                                      increment={this.incrementScopeQuestion} 
+                                      score={this.state.score} 
+                                      updateScore={this.updateScore} 
+                                      mainMenu={this.getMainMenu} 
+                                      wrongAnswer={this.state.scopeWrongAnswer}
+                                   
+                                   />}
+        {clickValue === 'combo' && <Combocomp comboData={comboData} comboQuestion={comboQuestion} increment={this.incrementComboQuestion} score={this.state.score} updateScore={this.updateScore} mainMenu={this.getMainMenu}/>}
+        {clickValue === 'prototypes' && <Protocomp protoData={protoData} protoQuestion={protoQuestion} increment={this.incrementProtoQuestion} score={this.state.score} updateScore={this.updateScore} mainMenu={this.getMainMenu}/>}
         </div>
         </div>
         

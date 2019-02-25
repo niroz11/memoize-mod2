@@ -18,7 +18,7 @@ class Combocomp extends Component {
            return (<div>
             {comboQuestion === -1 &&  <Instruction increment={this.props.increment}/>}
             {comboQuestion > -1 && comboQuestion < 10 && <Combocard comboData={comboData[comboQuestion]} increment={this.props.increment} score={score} updateScore={this.props.updateScore}/> }
-            {comboQuestion === 10 && <p>{score}</p> && <App/> }
+            {comboQuestion === 10 && <p>{score}</p> && this.props.mainMenu() }
             </div>)
         
     }

@@ -24,7 +24,7 @@ class Scopecomp extends Component {
         return (<div className="proto">
             {scopeQuestion === -1 &&  <Instruction increment={this.props.increment}/>}
             {scopeQuestion > -1 && scopeQuestion < 10 && <Card scopeData={scopeData[scopeQuestion]} increment={this.props.increment} score={score} updateScore={this.props.updateScore}/> }
-            {scopeQuestion === 10 && <p>{score}</p> && <App/> }
+            {scopeQuestion === 10 && <p>{score}</p> && this.props.mainMenu() }
         </div>)
     }
 }
