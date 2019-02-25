@@ -10,7 +10,7 @@
         opacity: .96;
         position: fixed;
         right: 0;
-        top: 100px;
+        top: 80px;
         width: 75%;
         z-index: 1;
       
@@ -20,6 +20,7 @@
     justify-content: center;
 }
 .rules-text p {
+    margin-top:30px;
     font-size: 30px;
     margin-bottom: 10px;
 
@@ -27,10 +28,16 @@
 .rules-text button{
     width:100px;
     height:50px;
-    margin-top:40px;
+    margin-top:20px;
     border-radius:50px;
     font-size: 20px;
     margin-left:200px;
 }
+.rules-text button:focus{
+    outline: none;   
+} 
+.rules-text button:hover {
+    cursor: pointer;
+  }
     
 

@@ -82,7 +82,7 @@ class App extends Component {
       <div className="entire-page">
       <div className="welcome-page">
         <h1 className="hello">Memoize</h1>
-        <h3 className="score">{this.state.score}</h3>
+        <p className="score">{this.state.score}</p>
         
         {clickValue === '' &&  buttons()}
         <div className="question-section">
