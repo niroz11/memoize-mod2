@@ -85,10 +85,13 @@ class App extends Component {
         <h3 className="score">{this.state.score}</h3>
         
         {clickValue === '' &&  buttons()}
+        <div className="question-section">
         {clickValue === 'scope' && <Scopecomp scopeData={scopeData} scopeQuestion={scopeQuestion} increment={this.incrementScopeQuestion} score={this.state.score} updateScore={this.updateScore}/>}
         {clickValue === 'combo' && <Combocomp comboData={comboData} comboQuestion={comboQuestion} increment={this.incrementComboQuestion} score={this.state.score} updateScore={this.updateScore}/>}
         {clickValue === 'prototypes' && <Protocomp protoData={protoData} protoQuestion={protoQuestion} increment={this.incrementProtoQuestion} score={this.state.score} updateScore={this.updateScore}/>}
         </div>
+        </div>
+        
         
             
       </div>

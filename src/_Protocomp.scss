@@ -1,0 +1,18 @@
+
+.card-buttons{
+    
+    display: grid;
+    grid-template-rows: 50px 50px 50px 50px;
+    margin-top: 20px;
+    
+}
+.card-buttons button{
+    margin-top:10px;
+    font-size: 20px;
+    border-radius:50px;
+    background:#add8e6;
+}
+
+.card-buttons button:focus{
+    outline: none;   
+}

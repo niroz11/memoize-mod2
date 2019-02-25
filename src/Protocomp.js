@@ -15,7 +15,7 @@ class protocomp extends Component {
         const {protoData,protoQuestion,score} = this.props
         
             
-        return (<div>
+        return (<div className="proto">
             {protoQuestion === -1 &&  <Instruction increment={this.props.increment}/>}
             {protoQuestion > -1 && protoQuestion < 10 && <Protocard protoData={protoData[protoQuestion]} increment={this.props.increment} score={score} updateScore={this.props.updateScore}/> }
             {protoQuestion === 10 && <p>{score}</p> && <App/> }
