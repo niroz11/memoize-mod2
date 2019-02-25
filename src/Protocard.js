@@ -37,9 +37,11 @@ class Protocard extends Component {
         
         
         return(
-            <div>
+            <div className="hey">
+            <div className="proto-card">
             <h1>{this.props.protoData.question}</h1>
             {options}
+            </div>
            
             
             </div>
