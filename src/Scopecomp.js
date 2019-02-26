@@ -3,17 +3,10 @@ import Card from "./Card";
 import Instruction from "./Instruction";
 
 class Scopecomp extends Component {
-  constructor() {
-    super();
-    this.state = {
-      clickedAnswer: ""
-    };
-  }
-
   render() {
     const { data, question, score } = this.props;
-    // console.log(this.props);
-    console.log(data, "this is data");
+
+    
     return (
       <div className="proto">
         {question === -1 && (
