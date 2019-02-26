@@ -2,6 +2,8 @@ import React from "react";
 import Scopecomp from "./Scopecomp";
 import { shallow } from "enzyme";
 
+
+
 describe("Scopecomp", () => {
   
 
@@ -9,7 +11,17 @@ describe("Scopecomp", () => {
 
   beforeEach(() => {
     wrapper = shallow(
-      <Scopecomp />
+      <Scopecomp
+              data={clickValue === "quiz" ? data : incorrect}
+              question={this.state.question}
+              increment={this.incrementQuestion}
+              score={this.state.score}
+              updateScore={this.updateScore}
+              mainMenu={this.getMainMenu}
+              localStorage={this.saveToLocalStorage}
+              toggleCard={this.toggleCard}
+              showCard={this.state.showCard}
+            />
     );
   });
 	

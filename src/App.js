@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import Scopecomp from "./Scopecomp.js";
 
-// import './App.scss';
-
 class App extends Component {
   constructor() {
     super();
@@ -37,7 +35,6 @@ class App extends Component {
   };
 
   incrementQuestion = () => {
-   
     let newQuestion = this.state.question;
     newQuestion++;
 
@@ -58,7 +55,6 @@ class App extends Component {
     });
   };
   toggleCard = () => {
-    
     this.setState({
       showCard: !this.state.showCard
     });
@@ -72,10 +68,18 @@ class App extends Component {
     const buttons = () => {
       return (
         <div className="buttons">
-          <button className="quiz-button" onClick={this.handleClick} name="quiz">
+          <button
+            className="quiz-button"
+            onClick={this.handleClick}
+            name="quiz"
+          >
             Take the quiz
           </button>
-          <button className="redo-button" onClick={this.handleClick} name="redo">
+          <button
+            className="redo-button"
+            onClick={this.handleClick}
+            name="redo"
+          >
             Question Missed
           </button>
         </div>
