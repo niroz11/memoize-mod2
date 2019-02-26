@@ -37,7 +37,8 @@ describe("Instruction", () => {
         showCard={mockShowCard}
       />
     );
-    wrapper.find(".toggle-button").simulate("click");
+    
     expect(mockToggleCard).toHaveBeenCalled();
+    
   });
 });

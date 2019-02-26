@@ -1,3 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Card should  1`] = `undefined`;
+
+exports[`Card should invoke handle 1`] = `undefined`;
+
+exports[`Card should invoke handleClick 1`] = `undefined`;
+
+exports[`Card should invoke handleClick 2`] = `undefined`;
+
 exports[`Card should match the snapshot with all data passed in 1`] = `undefined`;
+
+exports[`Card should match the snapshot with all data passed in 2`] = `undefined`;
+
+exports[`Card should return  1`] = `undefined`;
+
+exports[`Card should return incorrect answers 1`] = `undefined`;
+
+exports[`Card should return incorrect answers 2`] = `undefined`;
+
+exports[`Card should send  1`] = `undefined`;
+
+exports[`Card should send incorrect answers to local storage 1`] = `undefined`;

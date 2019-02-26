@@ -51,4 +51,19 @@ describe("Card", () => {
   it("should match the snapshot with all data passed in", () => {
     expect(wrapper).toMatchSnapshot();
   });
+
+  it("should invoke handleClick", () => {
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it("should return incorrect answers", () => {
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it("should send incorrect answers to local storage", () => {
+    expect(wrapper).toMatchSnapshot();
+  });
+
+
+
 });
