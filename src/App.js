@@ -37,7 +37,7 @@ class App extends Component {
   };
 
   incrementQuestion = () => {
-    // debugger;
+   
     let newQuestion = this.state.question;
     newQuestion++;
 
@@ -58,7 +58,7 @@ class App extends Component {
     });
   };
   toggleCard = () => {
-    console.log("im working");
+    
     this.setState({
       showCard: !this.state.showCard
     });

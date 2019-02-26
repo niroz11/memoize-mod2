@@ -29,7 +29,18 @@ describe("App", () => {
     wrapper.find(".redo-button").simulate("click", { target: { clickValue: "scope", question: 0}});
     expect(wrapper.state("question")).toEqual(0);
   });
-  
+  it("Increment question should change state when invoked", () => {
+    expect(wrapper.instance().incrementQuestion());
+  })
+  it("It should change state when getMainMenu is invoked", () => {
+    expect(wrapper.instance().getMainMenu());
+  })
+  it("It should change state when updateScore is invoked", () => {
+    expect(wrapper.instance().updateScore());
+  })
+  it("It should change state when toggleCard is invoked", () => {
+    expect(wrapper.instance().toggleCard());
+  })
 
   
 });
