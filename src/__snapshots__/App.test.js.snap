@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should match the snapshot with all data passed in 1`] = `
+<div
+  className="entire-page"
+>
+  <div
+    className="welcome-page"
+  >
+    <h1
+      className="hello"
+    >
+      Memoize
+    </h1>
+    <p
+      className="score"
+    >
+      0
+    </p>
+    <div
+      className="buttons"
+    >
+      <button
+        className="quiz-button"
+        name="quiz"
+        onClick={[Function]}
+      >
+        Take the quiz
+      </button>
+      <button
+        className="redo-button"
+        name="redo"
+        onClick={[Function]}
+      >
+        Question Missed
+      </button>
+    </div>
+    <div
+      className="question-section"
+    >
+      <Scopecomp
+        data={Array []}
+        increment={[Function]}
+        mainMenu={[Function]}
+        question={-1}
+        score={0}
+        showCard={true}
+        toggleCard={[Function]}
+        updateScore={[Function]}
+      />
+    </div>
+  </div>
+</div>
+`;

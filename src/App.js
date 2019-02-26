@@ -72,10 +72,10 @@ class App extends Component {
     const buttons = () => {
       return (
         <div className="buttons">
-          <button onClick={this.handleClick} name="scope">
+          <button className="quiz-button" onClick={this.handleClick} name="quiz">
             Take the quiz
           </button>
-          <button onClick={this.handleClick} name="redo">
+          <button className="redo-button" onClick={this.handleClick} name="redo">
             Question Missed
           </button>
         </div>
@@ -90,7 +90,7 @@ class App extends Component {
           {clickValue === "" && buttons()}
           <div className="question-section">
             <Scopecomp
-              data={clickValue === "scope" ? data : incorrect}
+              data={clickValue === "quiz" ? data : incorrect}
               question={this.state.question}
               increment={this.incrementQuestion}
               score={this.state.score}
