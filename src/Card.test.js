@@ -75,11 +75,7 @@ describe("Card", () => {
     expect(mockIncrement).toHaveBeenCalled();
   });
 
-  it("should add question to localstorage if incorrect answer is clicked", () => {
-    const mockEvent = { target: { innerText: 'wrong answer' } }
-    wrapper.find(".create-button0").simulate("click", mockEvent);
-    expect(mockSaveLocalStorage).toEqual(1)
-  });
+  
 
   
 
