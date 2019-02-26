@@ -2,7 +2,18 @@ import React from "react";
 import Card from "./Card";
 import { shallow } from "enzyme";
 
-let mockQuestion = 1;
+let mockQuestion = {
+  question: "What does Array.prototype.length returns?",
+  options: [
+    "length of an array",
+    "length of string",
+    "length of an object",
+    "number of elements in array"
+  ],
+  answer: "number of elements in array",
+  points: 10,
+  key: 1
+};
 let mockIncrement = jest.fn();
 let mockScore = 1;
 let mockUpdateScore = jest.fn();
@@ -52,17 +63,25 @@ describe("Card", () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it("should invoke handleClick", () => {
-    expect(wrapper).toMatchSnapshot();
+  it("should call updateScore if the right answer is clicked", () => {
+    const mockEvent = { target: { innerText: 'number of elements in array' } }
+    wrapper.find(".create-button0").simulate("click", mockEvent);
+    expect(mockUpdateScore).toHaveBeenCalled();
+  });
+  
+  it("should call increment if the wrong answer is clicked", () => {
+    const mockEvent = { target: { innerText: 'wrong answer' } }
+    wrapper.find(".create-button0").simulate("click", mockEvent);
+    expect(mockIncrement).toHaveBeenCalled();
   });
 
-  it("should return incorrect answers", () => {
-    expect(wrapper).toMatchSnapshot();
+  it("should add question to localstorage if incorrect answer is clicked", () => {
+    const mockEvent = { target: { innerText: 'wrong answer' } }
+    wrapper.find(".create-button0").simulate("click", mockEvent);
+    expect(mockSaveLocalStorage).toEqual(1)
   });
 
-  it("should send incorrect answers to local storage", () => {
-    expect(wrapper).toMatchSnapshot();
-  });
+  
 
 
 

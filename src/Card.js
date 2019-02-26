@@ -37,8 +37,8 @@ class Card extends Component {
     const answer = this.props.question.answer;
 
     // console.log(this.props.question, "heyy");
-    const options = this.props.question.options.map(option => {
-      return <button onClick={this.handleClick}>{option}</button>;
+    const options = this.props.question.options.map((option, index) => {
+      return <button className={"create-button" + index} onClick={this.handleClick} key={index}>{option}</button>;
     });
 
     return (
