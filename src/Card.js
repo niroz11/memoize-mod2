@@ -9,34 +9,31 @@ class Card extends Component {
   handleClick = event => {
     const clickedAnswer = event.target.innerText;
     const isCorrect = clickedAnswer === this.props.question.answer;
-    let wrongAnswers = JSON.parse(localStorage.getItem("wrong")) || [];
+    let wrongQuestions = JSON.parse(localStorage.getItem("wrong")) || [];
     // debugger;
     if (isCorrect) {
-      wrongAnswers = wrongAnswers.filter(answer => {
-        return answer.answer !== this.props.question.answer;
+      wrongQuestions = wrongQuestions.filter(question => {
+        return question.answer !== this.props.question.answer;
       });
       this.props.updateScore(); //come bakck to this
     } else {
-      const hasAnswer = wrongAnswers.some(
-        answer => answer.answer === this.props.question.answer
+      const hasAnswer = wrongQuestions.some(
+        question => question.answer === this.props.question.answer
       );
       if (!hasAnswer) {
-        wrongAnswers.push(this.props.question);
+        wrongQuestions.push(this.props.question);
       }
     }
 
     this.props.increment();
-    localStorage.setItem("wrong", JSON.stringify(wrongAnswers));
+    localStorage.setItem("wrong", JSON.stringify(wrongQuestions));
     this.setState({
       clickedAnswer: clickedAnswer
     });
   };
 
   render() {
-    const { clickedAnswer } = this.state;
-    const answer = this.props.question.answer;
-
-    // console.log(this.props.question, "heyy");
+   
     const options = this.props.question.options.map((option, index) => {
       return <button className={"create-button" + index} onClick={this.handleClick} key={index}>{option}</button>;
     });
