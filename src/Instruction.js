@@ -23,15 +23,15 @@ class Instruction extends Component {
               <p> * Play it cool! No cheating! :) </p>
               <p> * Each question carries 10 points</p>
               <p> * You may come back to solve answers you got it wrong</p>
-              <button onClick={this.props.toggleCard}>Lets Start</button>
+              <button className="toggle-button" onClick={this.props.toggleCard}>
+                Lets Start
+              </button>
             </div>
           </div>
         </div>
       );
     } else {
-      return(
-          <div></div>
-      );
+      return <div />;
     }
   }
 }

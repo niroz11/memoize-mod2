@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Instruction should match the snapshot with all data passed in 1`] = `
+<div
+  className="instruction"
+>
+  <div
+    className="inst-card"
+  >
+    <div
+      className="rules-text"
+    >
+      <p>
+         * Play it cool! No cheating! :) 
+      </p>
+      <p>
+         * Each question carries 10 points
+      </p>
+      <p>
+         * You may come back to solve answers you got it wrong
+      </p>
+      <button
+        className="toggle-button"
+        onClick={[MockFunction]}
+      >
+        Lets Start
+      </button>
+    </div>
+  </div>
+</div>
+`;

@@ -23,4 +23,10 @@ describe("Instruction", () => {
     it("should match the snapshot with all data passed in", () => {
       expect(wrapper).toMatchSnapshot();
     });
-  });
+    // it("should invoke toggle method", () => {
+        
+    //     wrapper.find(".toggle-button").simulate("click");
+    //     expect(wrapper.instance().mockToggleCard().toHaveBeenCalled(1))
+    // })
+    
+  })
