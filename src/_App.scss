@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
@@ -6,38 +6,71 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  background-color:#455358;
+  background-color: #455358;
   height: 750px;
-  background-image: url('https://cdn.pixabay.com/photo/2016/12/15/14/32/question-mark-background-1909040_960_720.png') no-repeat center center fixed;
-  } 
-.welcome-page{
+  background-image: url("https://cdn.pixabay.com/photo/2016/12/15/14/32/question-mark-background-1909040_960_720.png")
+    no-repeat center center fixed;
+}
+.welcome-page {
   width: 80%;
-  background-color:	#E0E0E0;
+  background-color: #e0e0e0;
   display: grid;
-  grid-template-rows: 70px 80px 100px;
-  background-image: url(http://media.giphy.com/media/ylyUQmwRhTyxiD5CFO/giphy.gif)
+  grid-template-rows: 180px 200px 150px;
+  background-image: url(http://media.giphy.com/media/ylyUQmwRhTyxiD5CFO/giphy.gif);
 }
 
-.hello{
+.title {
+  margin: 0 auto;
+  text-shadow: 1px 1px 0 #FFFFFF, 2px 2px 0 #000000;
+  font-size: 100px;
+}
+.buttons {
   margin: 0 auto;
 }
-.buttons{
-  margin:0 auto;
+// .buttons button{
+//   width: 100%;
+//   height: 50px;
+//   font-size: 30px;
+//   margin-bottom: 10px;
+// }
+
+.buttons button {
+  padding: 1em 2em;
+  border: 0.125em solid #474747;
+  box-shadow: 0.5em 0.5em 0 -0.125em #fff, 0.5em 0.5em lighten(#474747, 35%);
+  overflow: hidden;
+  position: relative;
+  color: #474747;
+  font: 18px "Space Mono";
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.3s;
+  &:after {
+    content: "hhh";
+    background: #474747;
+    width: 150%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transform: rotate(-45deg) translateY(-3em);
+    transform-origin: 0% 100%;
+    transition: 0.3s;
+  }
+  &:hover {
+    color: #fff;
+    box-shadow: 1em 1em 0 -0.125em #fff, 1em 1em lighten(#474747, 35%);
+    &:after {
+      transform: rotate(0deg);
+    }
+  }
 }
-.buttons button{
-  width: 100%;
-  height: 50px;
-  font-size: 30px;
-  margin-bottom: 10px;
-}
-  
-.score{
-  margin:0 auto;
+
+.score {
+  margin: 0 auto;
   font-size: 80px;
 }
-.question-section{
-  margin:0 auto;
+.question-section {
+  margin: 0 auto;
 }
-
-
-
