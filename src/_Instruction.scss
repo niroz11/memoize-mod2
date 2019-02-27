@@ -16,8 +16,15 @@
 @mixin giveFontSize($fontsize){
   font-size: $fontsize;
 }
+@mixin giveBgColor($backgroundcolor){
+  background-color: $backgroundcolor;
+}
+@mixin giveHeight($height){
+  height: $height;
+}
 .instruction {
-  background-color: #a781f5;
+  @include giveBgColor(#a781f5);
+  // background-color: #a781f5;
   border: solid black 4px;
   border-radius: 25px;
   bottom: 230px;
@@ -28,8 +35,8 @@
   position: fixed;
   right: 0;
   top: 190px;
-  
-  width: 50%;
+  @include giveWidth(50%)
+  // width: 50%;
   z-index: 1;
   
 }
@@ -40,15 +47,20 @@
   transition: 200px 2s;
 }
 .rules-text p {
-  margin-top: 30px;
-  font-size: 30px;
+  @include giveMarginTop(30px);
+  // margin-top: 30px;
+  @include giveFontSize(30px);
+  // font-size: 30px;
   margin-bottom: 10px;
 }
 .rules-text button {
-  width: 50px;
-  height: 50px;
+  @include giveWidth(50px);
+  // width: 50px;
+  @include giveHeight(50px);
+  // height: 50px;
   border-radius: 50px;
-  font-size: 20px;
+  @include giveFontSize(20px);
+  // font-size: 20px;
   margin: 0 auto;
   float: right;
 }
@@ -62,58 +74,78 @@
 
 @media screen and (min-width: 760px) {
   .instruction {
-    width: 80%;
-    background-color: magenta;
+    @include giveWidth(80%);
+    // width: 80%;
+    @include giveBgColor(magenta);
+    // background-color: magenta;
     bottom: 200px;
   }
 }
 @media screen and (min-width: 320px) {
   .instruction {
-    width: 82%;
+    @include giveWidth(82%);
+    // width: 82%;
     background-color: red;
     bottom: 60px;
-    margin-left: 22px;
+    @include giveMarginLeft(22px);
+    // margin-left: 22px;
   }
   .rules-text p {
     font-size: 20px;
   }
   .rules-text button {
-    width: 50px;
-    height: 30px;
+    @include giveWidth(50px);
+    // width: 50px;
+    @include giveHeight(30px);
+    // height: 30px;
     float: none;
     margin-left: 120px;
     border: 2px solid black;
-    margin-top: 100px;
+    @include giveMarginTop(100px);
+    // margin-top: 100px;
   }
 }
 @media screen and (min-width: 375px) {
   .instruction {
-    width: 90%;
-    background-color: red;
+    // @include giveWidth(90%);
+    // width: 90%;
+    @include giveBgColor(red);
+    // background-color: red;
     bottom: 88px;
-    margin-left: 21px;
+    @include giveMarginLeft(21px);
+    // margin-left: 21px;
   }
   .rules-text p {
-    font-size: 24px;
+    @include giveFontSize(24px);
+    // font-size: 24px;
   }
   .rules-text button {
-    width: 81px;
-    height: 40px;
+    @include giveWidth(81px);
+    // width: 81px;
+    @include giveHeight(40px);
+    // height: 40px;
     float: none;
-    margin-left: 120px;
+    @include giveMarginLeft(120px);
+    // margin-left: 120px;
     border: 2px solid black;
-    margin-top: 100px;
-    font-size: 30px;
+    @include giveMarginTop(100px);
+    // margin-top: 100px;
+    @include giveFontSize(30px);
+    // font-size: 30px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .instruction {
-    width: 60%;
-    background-color: red;
-    margin-left: 163px;
+    @include giveWidth(60%);
+    // width: 60%;
+    @include giveBgColor(red);
+    // background-color: red;
+    @include giveMarginLeft(163px);
+    // margin-left: 163px;
   }
   .rules-text button {
-    margin-left: 175px;
+    @include giveMarginLeft(175px);
+    // margin-left: 175px;
   }
 }

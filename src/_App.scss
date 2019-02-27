@@ -25,13 +25,17 @@
 @mixin giveFontSize($fontsize){
   font-size: $fontsize;
 }
+@mixin giveHeight($height){
+  height: $height;
+}
 
 
 .entire-page {
   display: flex;
   justify-content: center;
   @include giveWidth(100%);
-  height: 750px;
+  @include giveHeight(750px);
+  // height: 750px;
   background-image: url("https://www.axongarside.com/hs-fs/hubfs/Blog_images/New_images/Untitled%20design%20(3).jpg?width=880&height=400&name=Untitled%20design%20(3).jpg");
 }
 
@@ -49,7 +53,8 @@
   // font-size: 100px;
   text-transform: uppercase;
   text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9;
-  height: 120px;
+  @include giveHeight(120px);
+  // height: 120px;
   @include giveWidth(350px);
   padding: 10px 10px;
   box-shadow: 0 0 60px 30px #fff, 0 0 80px 60px #455358;
@@ -100,7 +105,8 @@
   }
   .welcome-page {
     grid-template-rows: 180px 100px 1fr;
-    width: 110%;
+    @include giveWidth(110%);
+    // width: 110%;
   }
   .buttons button {
     @include giveMarginLeft(55px);
@@ -134,7 +140,8 @@
     @include giveWidth(81%);
   }
   .entire-page {
-    height: 1025px;
+    @include giveHeight(1025px);
+    // height: 1025px;
   }
   .buttons button {
     @include giveMarginLeft(103px)
@@ -144,7 +151,8 @@
 @media screen and (min-width: 1024px) {
   
   .entire-page {
-    height: 1400px;
+    @include giveHeight(1400px);
+    // height: 1400px;
   }
   .proto-card h1{
     @include giveFontSize(40px);

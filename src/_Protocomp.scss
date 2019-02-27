@@ -1,16 +1,41 @@
+@mixin giveWidth($width){
+  width: $width;
+}
+@mixin giveMarginTop($margin){
+  margin-top: $margin;
+}
+@mixin giveMarginLeft($margin){
+  margin-left: $margin;
+}
+@mixin giveMargin($margin){
+  margin: $margin;
+}
+@mixin givePadding($padding){
+  margin: $padding;
+}
+@mixin giveFontSize($fontsize){
+  font-size: $fontsize;
+}
+@mixin giveBgColor($backgroundcolor){
+  background-color: $backgroundcolor;
+}
+
 .card-buttons {
   display: grid;
   grid-template-rows: 50px 50px 50px 50px;
-  margin-top: 20px;
-}
-.card-buttons button {
-  margin-top: 10px;
-  font-size: 20px;
-  border-radius: 50px;
-  background: #add8e6;
-  text-shadow: -1px -1px 0 #a84155;
-  background-image: linear-gradient(top, #f66c7b, #d25068);
-  transition: 1s;
+  @include giveMarginTop(20px);
+  button {
+    @include giveMarginTop(10px);
+    // margin-top: 10px;
+    @include giveFontSize(20px);
+    // font-size: 20px;
+    border-radius: 50px;
+    background: #add8e6;
+    text-shadow: -1px -1px 0 #a84155;
+    background-image: linear-gradient(top, #f66c7b, #d25068);
+    transition: 1s;
+  }
+
 }
 .card-buttons button:focus {
   outline: none;
@@ -23,10 +48,12 @@
 
 @media screen and (min-width: 320px) {
   .card-buttons {
-    margin-top: 70px;
-    margin-left: 46px;
-  }
-  .card-buttons button {
-    width: 90%;
+    @include giveMarginTop(70px);
+    // margin-top: 70px;
+    @include giveMarginLeft(46px);
+    // margin-left: 46px;
+    button{
+        width: 90%;
+    }
   }
 }
