@@ -1,3 +1,4 @@
+//Mixins
 @mixin giveWidth($width){
   width: $width;
 }
@@ -35,7 +36,7 @@
   position: fixed;
   right: 0;
   top: 190px;
-  @include giveWidth(50%)
+  @include giveWidth(50%);
   // width: 50%;
   z-index: 1;
   
@@ -53,6 +54,7 @@
   // font-size: 30px;
   margin-bottom: 10px;
 }
+//Style button for pop-up card
 .rules-text button {
   @include giveWidth(50px);
   // width: 50px;
@@ -72,6 +74,7 @@
   cursor: pointer;
 }
 
+//Media query
 @media screen and (min-width: 760px) {
   .instruction {
     @include giveWidth(80%);

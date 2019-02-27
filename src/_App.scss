@@ -7,6 +7,7 @@
 *:before {
   box-sizing: border-box;
 }
+//MIXINS
 @mixin giveWidth($width){
   width: $width;
 }
@@ -29,7 +30,7 @@
   height: $height;
 }
 
-
+//Main-page section
 .entire-page {
   display: flex;
   justify-content: center;
@@ -60,7 +61,8 @@
   box-shadow: 0 0 60px 30px #fff, 0 0 80px 60px #455358;
   @include giveMarginTop(10px);
 }
-    
+
+//Style main page buttons
 .buttons {
   margin: 0 auto;
   button{
@@ -97,6 +99,7 @@
   padding: 10px;
 }
 
+//Media Query
 @media screen and (min-width: 320px) {
   .title {
     @include giveFontSize(80px);
