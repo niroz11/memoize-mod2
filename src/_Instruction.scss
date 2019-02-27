@@ -13,7 +13,13 @@
   top: 190px;
   width: 75%;
   z-index: 1;
+  animation: slidein 5s infinite
 }
+
+// @keyframes slidein {
+//     from {top: 0px;}
+//   to {top: 200px;}
+// }
 .inst-card {
   display: flex;
   justify-content: center;

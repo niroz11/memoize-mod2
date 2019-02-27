@@ -41,7 +41,7 @@
                0 5px 10px rgba(0,0,0,.25),
                0 10px 10px rgba(0,0,0,.2),
                0 20px 20px rgba(0,0,0,.15);
-  // border: 2px solid red;
+  
   height: 120px;
   width: 350px;
   padding: 10px 10px;
@@ -90,6 +90,7 @@
   }
   &:hover {
     box-shadow: 1em 1em 0 -0.125em #fff, 1em 1em lighten(#474747, 35%);
+    background-color: salmon;
     &:after {
       transform: rotate(0deg);
     }
