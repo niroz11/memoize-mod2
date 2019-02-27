@@ -11,17 +11,18 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  background-color: #455358;
+  // background-color: #455358;
   height: 750px;
-  background-image: url("https://cdn.pixabay.com/photo/2016/12/15/14/32/question-mark-background-1909040_960_720.png")
-    no-repeat center center fixed;
+  background-image: url("https://www.axongarside.com/hs-fs/hubfs/Blog_images/New_images/Untitled%20design%20(3).jpg?width=880&height=400&name=Untitled%20design%20(3).jpg");
+  // background-repeat: no-repeat;
+  // background-size: auto;
 }
 .welcome-page {
   width: 80%;
   background-color: #e0e0e0;
   display: grid;
   grid-template-rows: 180px 200px 1fr;
-  background-image: url(http://media.giphy.com/media/ylyUQmwRhTyxiD5CFO/giphy.gif);
+  background-image: url("http://media.giphy.com/media/ylyUQmwRhTyxiD5CFO/giphy.gif");
 }
 
 .title {
@@ -29,28 +30,17 @@
   text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #000000;
   font-size: 100px;
   text-transform: uppercase;
-  text-shadow: 0 1px 0 #ccc,
-               0 2px 0 #c9c9c9,
-               0 3px 0 #bbb,
-               0 4px 0 #b9b9b9,
-               0 5px 0 #aaa,
-               0 6px 1px rgba(0,0,0,.1),
-               0 0 5px rgba(0,0,0,.1),
-               0 1px 3px rgba(0,0,0,.3),
-               0 3px 5px rgba(0,0,0,.2),
-               0 5px 10px rgba(0,0,0,.25),
-               0 10px 10px rgba(0,0,0,.2),
-               0 20px 20px rgba(0,0,0,.15);
-  
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9,
+    0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1),
+    0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2),
+    0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2),
+    0 20px 20px rgba(0, 0, 0, 0.15);
+
   height: 120px;
   width: 350px;
   padding: 10px 10px;
-  box-shadow:
-    0 0 60px 30px #fff,
-    
-    0 0 80px 60px #455358;;
-    margin-top: 10px;
-
+  box-shadow: 0 0 60px 30px #fff, 0 0 80px 60px #455358;
+  margin-top: 10px;
 }
 .buttons {
   margin: 0 auto;
@@ -96,7 +86,7 @@
     }
   }
 }
-.redo-button{
+.redo-button {
   margin-left: 100px;
 }
 
@@ -106,4 +96,20 @@
 }
 .question-section {
   margin: 0 auto;
+}
+
+@media screen and (max-width: 320px) {
+  .title {
+    font-size: 80px;
+  }
+  .welcome-page {
+    width: 100%;
+  }
+  .buttons button{
+    margin-left: 50px;
+    box-shadow: none;
+  }
+  .redo-button {
+    width: 50%;
+  }
 }

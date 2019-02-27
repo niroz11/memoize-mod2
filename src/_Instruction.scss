@@ -3,7 +3,7 @@
   border: solid black 4px;
   border-radius: 25px;
 
-  bottom: 120px;
+  bottom: 255px;
   left: 0;
   margin: auto;
   overflow: auto;
@@ -11,9 +11,9 @@
   position: fixed;
   right: 0;
   top: 190px;
-  width: 75%;
+  width: 50%;
   z-index: 1;
-  animation: slidein 5s infinite
+  animation: slidein 5s infinite;
 }
 
 // @keyframes slidein {
@@ -31,16 +31,57 @@
   margin-bottom: 10px;
 }
 .rules-text button {
-  width: 100px;
+  width: 50px;
   height: 50px;
-  margin-top: 20px;
+  // margin-top: 20px;
   border-radius: 50px;
   font-size: 20px;
-  margin-left: 200px;
+  margin: 0 auto;
+  float:right;
+  
 }
 .rules-text button:focus {
   outline: none;
 }
 .rules-text button:hover {
   cursor: pointer;
+}
+
+//media query 
+
+@media screen and (max-width: 1126px){
+  .instruction{
+    width: 75%;
+    background-color: magenta;
+  }
+  .rules-text button {
+    float:right;
+  }
+}
+@media screen and (max-width: 760px){
+  .instruction{
+    width: 80%;
+    background-color: magenta;
+    bottom: 200px;
+  }
+}
+@media screen and (max-width: 320px){
+  .instruction{
+    width: 80%;
+    background-color: red;
+    bottom: 88px;
+    margin-left: 22px;
+  }
+  .rules-text p{
+    font-size: 20px;
+  }
+  .rules-text button{
+    width: 50px;
+    height: 30px;
+    float: none;
+    margin-left: 120px;
+    border: 2px solid black;
+    margin-top: 100px;
+    
+  }
 }

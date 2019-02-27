@@ -24,7 +24,7 @@ class Instruction extends Component {
               <p> * Each question carries 10 points</p>
               <p> * You may come back to solve answers you got it wrong</p>
               <button className="toggle-button" onClick={this.props.toggleCard}>
-                Lets Start
+                Go
               </button>
             </div>
           </div>
