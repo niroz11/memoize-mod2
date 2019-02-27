@@ -1,19 +1,5 @@
 import React, { Component } from "react";
 class Instruction extends Component {
-  // constructor() {
-  //   super();
-  //   this.state = {
-  //     clickedAnswer: "",
-  //     // button: ""
-  //   };
-  // }
-
-  // handleClick(event) {
-  //   this.setState({
-  //     button: event.target.name
-  //   });
-  // }
-
   render() {
     if (this.props.showCard) {
       return (

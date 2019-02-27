@@ -7,16 +7,15 @@
 *:before {
   box-sizing: border-box;
 }
+
 .entire-page {
   display: flex;
   justify-content: center;
   width: 100%;
-  // background-color: #455358;
   height: 750px;
   background-image: url("https://www.axongarside.com/hs-fs/hubfs/Blog_images/New_images/Untitled%20design%20(3).jpg?width=880&height=400&name=Untitled%20design%20(3).jpg");
-  // background-repeat: no-repeat;
-  // background-size: auto;
 }
+
 .welcome-page {
   width: 80%;
   background-color: #e0e0e0;
@@ -30,62 +29,34 @@
   text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #000000;
   font-size: 100px;
   text-transform: uppercase;
-  text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9,
-    0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1),
-    0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2),
-    0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2),
-    0 20px 20px rgba(0, 0, 0, 0.15);
-
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9;
   height: 120px;
   width: 350px;
   padding: 10px 10px;
   box-shadow: 0 0 60px 30px #fff, 0 0 80px 60px #455358;
   margin-top: 10px;
 }
+    
 .buttons {
   margin: 0 auto;
 }
-// .buttons button{
-//   width: 100%;
-//   height: 50px;
-//   font-size: 30px;
-//   margin-bottom: 10px;
-// }
 
 .buttons button {
-  padding: 1em 2em;
+  padding: 16px 32px;
   background: #cccccc;
-  border: 0.125em solid #474747;
-  box-shadow: 0.5em 0.5em 0 -0.125em salmon, 0.5em 0.5em lighten(#474747, 35%);
-  // overflow: hidden;
-  transition: border-color 1s ease;
-  position: relative;
-  color: #474747;
+  border: 10px solid #474747;
+  box-shadow: 8px 8px 0 -2px salmon, 8px 8px lighten(#474747, 35%);
   font: 22px "Space Mono";
   text-decoration: none;
   text-transform: uppercase;
   transition: 0.3s;
-  &:after {
-    content: "hhh";
-    background: #474747;
-    width: 150%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transform: rotate(-45deg) translateY(-3em);
-    transform-origin: 0% 100%;
-    transition: 0.3s;
-  }
   &:hover {
     box-shadow: 1em 1em 0 -0.125em #fff, 1em 1em lighten(#474747, 35%);
     background-color: salmon;
-    &:after {
-      transform: rotate(0deg);
-    }
+    
   }
 }
+
 .redo-button {
   margin-left: 100px;
 }
@@ -161,6 +132,6 @@
   .card-buttons button {
     width: 97%;
     font-size: 31px;
-    // height: 80px;
+    
 }
 }

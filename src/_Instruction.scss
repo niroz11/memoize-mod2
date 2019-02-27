@@ -2,7 +2,6 @@
   background-color: #a781f5;
   border: solid black 4px;
   border-radius: 25px;
-
   bottom: 230px;
   left: 0;
   margin: auto;
@@ -16,10 +15,6 @@
   animation: slidein 5s infinite;
 }
 
-// @keyframes slidein {
-//     from {top: 0px;}
-//   to {top: 200px;}
-// }
 .inst-card {
   display: flex;
   justify-content: center;
@@ -33,13 +28,12 @@
 .rules-text button {
   width: 50px;
   height: 50px;
-  // margin-top: 20px;
   border-radius: 50px;
   font-size: 20px;
   margin: 0 auto;
-  float:right;
-  
+  float: right;
 }
+
 .rules-text button:focus {
   outline: none;
 }
@@ -47,55 +41,43 @@
   cursor: pointer;
 }
 
-//media query 
-
-// @media screen and (max-width: 1126px){
-//   .instruction{
-//     width: 75%;
-//     background-color: magenta;
-//   }
-//   .rules-text button {
-//     float:right;
-//   }
-// }
-@media screen and (min-width: 760px){
-  .instruction{
+@media screen and (min-width: 760px) {
+  .instruction {
     width: 80%;
     background-color: magenta;
     bottom: 200px;
   }
 }
-@media screen and (min-width: 320px){
-  .instruction{
+@media screen and (min-width: 320px) {
+  .instruction {
     width: 82%;
     background-color: red;
     bottom: 60px;
     margin-left: 22px;
   }
-  .rules-text p{
+  .rules-text p {
     font-size: 20px;
   }
-  .rules-text button{
+  .rules-text button {
     width: 50px;
     height: 30px;
     float: none;
     margin-left: 120px;
     border: 2px solid black;
     margin-top: 100px;
-    
   }
 }
-@media screen and (min-width: 375px){
-  .instruction{
+@media screen and (min-width: 375px) {
+  .instruction {
     width: 90%;
     background-color: red;
     bottom: 88px;
     margin-left: 21px;
   }
-  .rules-text p{
+  .rules-text p {
     font-size: 24px;
   }
-  .rules-text button{
+  .rules-text button {
     width: 81px;
     height: 40px;
     float: none;
@@ -103,32 +85,16 @@
     border: 2px solid black;
     margin-top: 100px;
     font-size: 30px;
-    
   }
 }
 
-@media screen and (min-width: 768px){
-  .instruction{
+@media screen and (min-width: 768px) {
+  .instruction {
     width: 60%;
     background-color: red;
-    // bottom: 460px;
     margin-left: 163px;
-
   }
-  .rules-text button{
+  .rules-text button {
     margin-left: 175px;
   }
 }
-
-// @media screen and (min-width: 1024px) {
-  
-//   .instruction{
-//     margin-left:230px;
-//     bottom: 800px;
-//   }
-//   .rules-text button{
-//     width: 120px;
-//     height: 60px;
-//     font-size: 50px;
-//   }
-// }
