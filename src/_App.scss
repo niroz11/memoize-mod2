@@ -7,17 +7,36 @@
 *:before {
   box-sizing: border-box;
 }
+@mixin giveWidth($width){
+  width: $width;
+}
+@mixin giveMarginTop($margin){
+  margin-top: $margin;
+}
+@mixin giveMarginLeft($margin){
+  margin-left: $margin;
+}
+@mixin giveMargin($margin){
+  margin: $margin;
+}
+@mixin givePadding($padding){
+  margin: $padding;
+}
+@mixin giveFontSize($fontsize){
+  font-size: $fontsize;
+}
+
 
 .entire-page {
   display: flex;
   justify-content: center;
-  width: 100%;
+  @include giveWidth(100%);
   height: 750px;
   background-image: url("https://www.axongarside.com/hs-fs/hubfs/Blog_images/New_images/Untitled%20design%20(3).jpg?width=880&height=400&name=Untitled%20design%20(3).jpg");
 }
 
 .welcome-page {
-  width: 80%;
+  @include giveWidth(80%);
   background-color: #e0e0e0;
   display: grid;
   grid-template-rows: 180px 200px 1fr;
@@ -26,22 +45,20 @@
 
 .title {
   margin: 0 auto;
-  text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #000000;
-  font-size: 100px;
+  @include giveFontSize(100px);
+  // font-size: 100px;
   text-transform: uppercase;
   text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9;
   height: 120px;
-  width: 350px;
+  @include giveWidth(350px);
   padding: 10px 10px;
   box-shadow: 0 0 60px 30px #fff, 0 0 80px 60px #455358;
-  margin-top: 10px;
+  @include giveMarginTop(10px);
 }
     
 .buttons {
   margin: 0 auto;
-}
-
-.buttons button {
+  button{
   padding: 16px 32px;
   background: #cccccc;
   border: 10px solid #474747;
@@ -51,22 +68,23 @@
   text-transform: uppercase;
   transition: 0.3s;
   &:hover {
-    box-shadow: 1em 1em 0 -0.125em #fff, 1em 1em lighten(#474747, 35%);
+    box-shadow: 16px 16px 0 -2px #fff, 16px 16px lighten(#474747, 35%);
     background-color: salmon;
     
   }
+  }
 }
-
 .redo-button {
-  margin-left: 100px;
+  @include giveMarginLeft(100px);
 }
 
 .score {
-  margin: 0 auto;
-  font-size: 80px;
+  @include giveMargin(0 auto);
+  @include giveFontSize(80px);
+  // font-size: 80px;
 }
 .question-section {
-  margin: 0 auto;
+  @include giveMargin(0 auto);
 }
 .proto-card h1 {
   border: 5px solid grey;
@@ -76,7 +94,8 @@
 
 @media screen and (min-width: 320px) {
   .title {
-    font-size: 80px;
+    @include giveFontSize(80px);
+    // font-size: 80px;
     padding-left: 50px;
   }
   .welcome-page {
@@ -84,16 +103,17 @@
     width: 110%;
   }
   .buttons button {
-    margin-left: 55px;
-    margin-top: 30px;
+    @include giveMarginLeft(55px);
+    @include giveMarginTop(30px);
     box-shadow: none;
   }
   .redo-button {
-    width: 73%;
+    @include giveWidth(73%);
   }
   .proto-card h1 {
-    font-size: 21px;
-    margin-left: 10px;
+    @include giveFontSize(21px);
+    // font-size: 21px;
+    @include giveMarginLeft(10px);
     border: 5px solid grey;
     border-radius: 16px;
     padding: 10px;
@@ -105,19 +125,19 @@
 
 @media screen and (min-width: 375px) {
   .buttons button {
-    width: 71%;
+    @include giveWidth(71%);
   }
 }
 
 @media screen and (min-width: 768px) {
   .welcome-page {
-    width: 81%;
+    @include giveWidth(81%);
   }
   .entire-page {
     height: 1025px;
   }
   .buttons button {
-    margin-left: 103px;
+    @include giveMarginLeft(103px)
   }
 }
 
@@ -127,11 +147,13 @@
     height: 1400px;
   }
   .proto-card h1{
-    font-size: 40px;
+    @include giveFontSize(40px);
+    // font-size: 40px;
   }
   .card-buttons button {
-    width: 97%;
-    font-size: 31px;
+    @include giveWidth(97%);
+    @include giveFontSize(31px);
+    // font-size: 31px;
     
 }
 }
