@@ -54,14 +54,14 @@
 
 .buttons button {
   padding: 1em 2em;
-
+  background: #cccccc;
   border: 0.125em solid #474747;
-  box-shadow: 0.5em 0.5em 0 -0.125em #fff, 0.5em 0.5em lighten(#474747, 35%);
+  box-shadow: 0.5em 0.5em 0 -0.125em salmon, 0.5em 0.5em lighten(#474747, 35%);
   // overflow: hidden;
   transition: border-color 1s ease;
   position: relative;
   color: #474747;
-  font: 18px "Space Mono";
+  font: 22px "Space Mono";
   text-decoration: none;
   text-transform: uppercase;
   transition: 0.3s;
@@ -97,26 +97,70 @@
 .question-section {
   margin: 0 auto;
 }
+.proto-card h1 {
+  border: 5px solid grey;
+  border-radius: 16px;
+  padding: 10px;
+}
 
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 320px) {
   .title {
     font-size: 80px;
+    padding-left: 50px;
   }
   .welcome-page {
     grid-template-rows: 180px 100px 1fr;
-    width: 100%;
+    width: 110%;
   }
-  .buttons button{
-    margin-left: 50px;
+  .buttons button {
+    margin-left: 55px;
+    margin-top: 30px;
     box-shadow: none;
   }
   .redo-button {
-    width: 60%;
+    width: 73%;
   }
   .proto-card h1 {
     font-size: 21px;
-  }
-  .question-section{
+    margin-left: 10px;
+    border: 5px solid grey;
+    border-radius: 16px;
     padding: 10px;
   }
+  .question-section {
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .buttons button {
+    width: 71%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .welcome-page {
+    width: 81%;
+  }
+  .entire-page {
+    height: 1025px;
+  }
+  .buttons button {
+    margin-left: 103px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  
+  .entire-page {
+    height: 1400px;
+  }
+  .proto-card h1{
+    font-size: 40px;
+  }
+  .card-buttons button {
+    width: 97%;
+    font-size: 31px;
+    // height: 80px;
+}
 }

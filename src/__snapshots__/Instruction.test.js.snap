@@ -23,7 +23,7 @@ exports[`Instruction should match the snapshot with all data passed in 1`] = `
         className="toggle-button"
         onClick={[MockFunction]}
       >
-        Lets Start
+        Go
       </button>
     </div>
   </div>
