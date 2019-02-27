@@ -103,5 +103,5 @@ describe("Card", () => {
     );
   });
 
-  it.skip("should increment question and set state every time an answer is clicked", () => {});
+  
 });
