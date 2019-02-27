@@ -88,7 +88,8 @@ class App extends Component {
     return (
       <div className="entire-page">
         <div className="welcome-page">
-          <p className="title">Memoize</p>
+          <p className="title">JS Fun</p>
+
           <p className="score">{this.state.score}</p>
 
           {clickValue === "" && buttons()}

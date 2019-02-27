@@ -2,8 +2,10 @@
   margin: 0;
   padding: 0;
 }
-*, *:after, *:before {
-	box-sizing: border-box;
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
 }
 .entire-page {
   display: flex;
@@ -18,15 +20,37 @@
   width: 80%;
   background-color: #e0e0e0;
   display: grid;
-  grid-template-rows: 180px 200px 150px;
+  grid-template-rows: 180px 200px 1fr;
   background-image: url(http://media.giphy.com/media/ylyUQmwRhTyxiD5CFO/giphy.gif);
 }
 
 .title {
   margin: 0 auto;
-  text-shadow: 1px 1px 0 #FFFFFF, 2px 2px 0 #000000;
+  text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #000000;
   font-size: 100px;
   text-transform: uppercase;
+  text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+  // border: 2px solid red;
+  height: 120px;
+  width: 350px;
+  padding: 10px 10px;
+  box-shadow:
+    0 0 60px 30px #fff,
+    
+    0 0 80px 60px #455358;;
+    margin-top: 10px;
+
 }
 .buttons {
   margin: 0 auto;
@@ -43,8 +67,8 @@
 
   border: 0.125em solid #474747;
   box-shadow: 0.5em 0.5em 0 -0.125em #fff, 0.5em 0.5em lighten(#474747, 35%);
-  overflow: hidden;
-  transition: border-color 1s ease;  
+  // overflow: hidden;
+  transition: border-color 1s ease;
   position: relative;
   color: #474747;
   font: 18px "Space Mono";
@@ -65,12 +89,14 @@
     transition: 0.3s;
   }
   &:hover {
-    // color: #fff;
     box-shadow: 1em 1em 0 -0.125em #fff, 1em 1em lighten(#474747, 35%);
     &:after {
       transform: rotate(0deg);
     }
   }
+}
+.redo-button{
+  margin-left: 100px;
 }
 
 .score {

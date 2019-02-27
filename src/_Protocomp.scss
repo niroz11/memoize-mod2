@@ -12,6 +12,7 @@
   background: #d25068;
   border: 1px solid #d25068;
   background-image: linear-gradient(top, #f66c7b, #d25068);
+
 }
 
 .card-buttons button:focus {
@@ -19,4 +20,9 @@
 }
 .card-buttons button:hover {
   cursor: pointer;
+  border: 3px dashed #ccc;
+  
+    
+   
+ 
 }

@@ -1,45 +1,40 @@
-.instruction{
-    
-        background-color: #a781f5;
-        border: solid black 4px;
-        border-radius: 25px;
-        bottom: 265px;
-        left: 0;
-        margin: auto;
-        overflow: scroll;
-        opacity: .96;
-        position: fixed;
-        right: 0;
-        top: 80px;
-        width: 75%;
-        z-index: 1;
-      
+.instruction {
+  background-color: #a781f5;
+  border: solid black 4px;
+  border-radius: 25px;
+
+  bottom: 120px;
+  left: 0;
+  margin: auto;
+  overflow: auto;
+  opacity: 1;
+  position: fixed;
+  right: 0;
+  top: 190px;
+  width: 75%;
+  z-index: 1;
 }
-.inst-card{
-    display: flex;
-    justify-content: center;
-    transition: 200px 2s;
-    
+.inst-card {
+  display: flex;
+  justify-content: center;
+  transition: 200px 2s;
 }
 .rules-text p {
-    margin-top:30px;
-    font-size: 30px;
-    margin-bottom: 10px;
-
+  margin-top: 30px;
+  font-size: 30px;
+  margin-bottom: 10px;
 }
-.rules-text button{
-    width:100px;
-    height:50px;
-    margin-top:20px;
-    border-radius:50px;
-    font-size: 20px;
-    margin-left:200px;
+.rules-text button {
+  width: 100px;
+  height: 50px;
+  margin-top: 20px;
+  border-radius: 50px;
+  font-size: 20px;
+  margin-left: 200px;
 }
-.rules-text button:focus{
-    outline: none;   
-} 
+.rules-text button:focus {
+  outline: none;
+}
 .rules-text button:hover {
-    cursor: pointer;
-  }
-    
-
+  cursor: pointer;
+}
