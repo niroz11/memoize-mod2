@@ -42,6 +42,7 @@ class App extends Component {
       question: newQuestion
     });
   };
+  
   getMainMenu = () => {
     this.setState({
       clickValue: "",
@@ -62,7 +63,7 @@ class App extends Component {
 
   render() {
     const incorrect = JSON.parse(localStorage.getItem("wrong")) || [];
-    // console.log(this.state.data);
+
     const { clickValue, data } = this.state;
 
     const buttons = () => {
@@ -80,7 +81,7 @@ class App extends Component {
             onClick={this.handleClick}
             name="redo"
           >
-            Question Missed
+            Try again
           </button>
         </div>
       );

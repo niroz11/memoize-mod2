@@ -11,7 +11,7 @@ class Scopecomp extends Component {
       <div className="proto">
         {question === -1 && (
           <Instruction
-            increment={this.props.increment}
+            // increment={this.props.increment}
             toggleCard={this.props.toggleCard}
             showCard={this.props.showCard}
           />

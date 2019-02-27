@@ -8,7 +8,8 @@ class Instruction extends Component {
             <div className="rules-text">
               <p> * Play it cool! No cheating! :) </p>
               <p> * Each question carries 10 points</p>
-              <p> * You may come back to solve answers you got it wrong</p>
+              <p> * You may come back to solve answers you did not get score for</p>
+              <p> * Go to 'Try again' menu to see not answered question</p>
               <button className="toggle-button" onClick={this.props.toggleCard}>
                 Go
               </button>

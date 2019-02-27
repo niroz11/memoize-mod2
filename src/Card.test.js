@@ -14,9 +14,11 @@ let mockQuestion = {
   points: 10,
   key: 1
 };
+
 let mockIncrement = jest.fn();
-let mockScore = 1;
 let mockUpdateScore = jest.fn();
+let mockScore = 1;
+
 let mockSaveLocalStorage = [
   {
     question: "What does Array.prototype.length returns?",
@@ -64,21 +66,42 @@ describe("Card", () => {
   });
 
   it("should call updateScore if the right answer is clicked", () => {
-    const mockEvent = { target: { innerText: 'number of elements in array' } }
-    wrapper.find(".create-button0").simulate("click", mockEvent);
+    wrapper
+      .find(".create-button0")
+      .simulate("click", {
+        target: { innerText: "number of elements in array" }
+      });
     expect(mockUpdateScore).toHaveBeenCalled();
   });
-  
-  it("should call increment if the wrong answer is clicked", () => {
-    const mockEvent = { target: { innerText: 'wrong answer' } }
-    wrapper.find(".create-button0").simulate("click", mockEvent);
+
+  it.skip("should call update local storage if the wrong answer is clicked", () => {
+    localStorage.setItem = jest.fn();
+    wrapper
+      .find(".create-button0")
+      .simulate("click", { target: { innerText: "this is a test" } });
+    expect(localStorage.setItem).toHaveBeenCalledWith();
+  });
+
+  it("should increment question when answer is clicked", () => {
+    wrapper
+      .find(".create-button0")
+      .simulate("click", {
+        target: { innerText: "number of elements in array" }
+      });
     expect(mockIncrement).toHaveBeenCalled();
   });
 
-  
+  it("should set state when answer is clicked", () => {
+    expect(wrapper.state("clickedAnswer")).toEqual("");
+    wrapper
+      .find(".create-button0")
+      .simulate("click", {
+        target: { innerText: "number of elements in array" }
+      });
+    expect(wrapper.state("clickedAnswer")).toEqual(
+      "number of elements in array"
+    );
+  });
 
-  
-
-
-
+  it.skip("should increment question and set state every time an answer is clicked", () => {});
 });

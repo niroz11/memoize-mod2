@@ -32,7 +32,7 @@ exports[`App should match the snapshot with all data passed in 1`] = `
         name="redo"
         onClick={[Function]}
       >
-        Question Missed
+        Try again
       </button>
     </div>
     <div

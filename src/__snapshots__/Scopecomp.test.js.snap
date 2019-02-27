@@ -5,7 +5,6 @@ exports[`Scopecomp should match the snapshot with all data passed in 1`] = `
   className="proto"
 >
   <Instruction
-    increment={[MockFunction]}
     showCard={true}
     toggleCard={[MockFunction]}
   />
