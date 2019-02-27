@@ -1,25 +1,22 @@
-
-.card-buttons{
-    
-    display: grid;
-    grid-template-rows: 50px 50px 50px 50px;
-    margin-top: 20px;
-    
+.card-buttons {
+  display: grid;
+  grid-template-rows: 50px 50px 50px 50px;
+  margin-top: 20px;
 }
-.card-buttons button{
-    margin-top:10px;
-    font-size: 20px;
-    border-radius:50px;
-    background:#add8e6;
-    text-shadow:-1px -1px 0 #A84155;
-	background: #D25068;
-    border:1px solid #D25068;
-    background-image:linear-gradient(top, #F66C7B, #D25068);
+.card-buttons button {
+  margin-top: 10px;
+  font-size: 20px;
+  border-radius: 50px;
+  background: #add8e6;
+  text-shadow: -1px -1px 0 #a84155;
+  background: #d25068;
+  border: 1px solid #d25068;
+  background-image: linear-gradient(top, #f66c7b, #d25068);
 }
 
-.card-buttons button:focus{
-    outline: none;   
+.card-buttons button:focus {
+  outline: none;
 }
 .card-buttons button:hover {
-    cursor: pointer;
-  }
+  cursor: pointer;
+}

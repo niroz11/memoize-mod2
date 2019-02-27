@@ -2,6 +2,9 @@
   margin: 0;
   padding: 0;
 }
+*, *:after, *:before {
+	box-sizing: border-box;
+}
 .entire-page {
   display: flex;
   justify-content: center;
@@ -23,6 +26,7 @@
   margin: 0 auto;
   text-shadow: 1px 1px 0 #FFFFFF, 2px 2px 0 #000000;
   font-size: 100px;
+  text-transform: uppercase;
 }
 .buttons {
   margin: 0 auto;
@@ -36,9 +40,11 @@
 
 .buttons button {
   padding: 1em 2em;
+
   border: 0.125em solid #474747;
   box-shadow: 0.5em 0.5em 0 -0.125em #fff, 0.5em 0.5em lighten(#474747, 35%);
   overflow: hidden;
+  transition: border-color 1s ease;  
   position: relative;
   color: #474747;
   font: 18px "Space Mono";
@@ -59,7 +65,7 @@
     transition: 0.3s;
   }
   &:hover {
-    color: #fff;
+    // color: #fff;
     box-shadow: 1em 1em 0 -0.125em #fff, 1em 1em lighten(#474747, 35%);
     &:after {
       transform: rotate(0deg);
