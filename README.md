@@ -1,11 +1,18 @@
 # JS FUN REVIEW 
 
+
 ### Abstract:
 
 ### Set-Up Instructions:
 
 ### Preview:
 ![new](https://user-images.githubusercontent.com/41176822/53479971-790cb900-3a37-11e9-8555-d364c9e58993.gif)
+
+### Desktop View
+<img width="1439" alt="screen shot 2019-02-27 at 3 52 31 am" src="https://user-images.githubusercontent.com/41176822/53485322-2b964900-3a43-11e9-8d08-fbaf14da2234.png">
+
+### Mobile View
+<img width="368" alt="screen shot 2019-02-27 at 3 49 51 am" src="https://user-images.githubusercontent.com/41176822/53485257-f853ba00-3a42-11e9-8f48-f91a41e80c9d.png">
 
 ### Main Technology Used:
 * React
