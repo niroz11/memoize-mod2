@@ -1,7 +1,7 @@
 # JS FUN Quiz
 
 ### Abstract:
-JS Fun is a single page application that utilizes api to get questions related to JS Fun practise from week one of our Mod 2.t is an app where user can keep track of their right or wrong answer through score and can come back to answer the question that did not get the score. 
+JS Fun is a single page application that utilizes api to get questions related to JS Fun practise from week one of our Mod 2. It is an app where user can keep track of their right or wrong answer through score and can come back to answer the question that did not get the score. 
 Built on React js library, this app is fully tested on Jest and Enzyme and compatiable along the various screen devices.
 
 ### Set-Up Instructions:
