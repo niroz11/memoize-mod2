@@ -103,6 +103,7 @@
     font-size: 80px;
   }
   .welcome-page {
+    grid-template-rows: 180px 100px 1fr;
     width: 100%;
   }
   .buttons button{
@@ -110,6 +111,12 @@
     box-shadow: none;
   }
   .redo-button {
-    width: 50%;
+    width: 60%;
+  }
+  .proto-card h1 {
+    font-size: 21px;
+  }
+  .question-section{
+    padding: 10px;
   }
 }

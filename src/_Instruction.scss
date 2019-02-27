@@ -85,3 +85,23 @@
     
   }
 }
+@media screen and (max-width: 375px){
+  .instruction{
+    width: 90%;
+    background-color: red;
+    bottom: 88px;
+    margin-left: 22px;
+  }
+  .rules-text p{
+    font-size: 20px;
+  }
+  .rules-text button{
+    width: 50px;
+    height: 30px;
+    float: none;
+    margin-left: 120px;
+    border: 2px solid black;
+    margin-top: 100px;
+    
+  }
+}
