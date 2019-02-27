@@ -5,9 +5,9 @@ JS Fun is a single page application that utilizes api to get questions related t
 Built on React js library, this app is fully tested on Jest and Enzyme and compatiable along the various screen devices.
 
 ### Set-Up Instructions:
-Clone this repo
-Run npm install from the root directory
-Run npm start and it should start via localhost
+* Clone this repo
+* Run npm install from the root directory
+* Run npm start and it should start via localhost
 
 ### Preview:
 ![new](https://user-images.githubusercontent.com/41176822/53479971-790cb900-3a37-11e9-8555-d364c9e58993.gif)
